@@ -1,0 +1,297 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\begin_preamble
+% Variables to change every new document
+\newcommand{\hmwkClass}{236330 - Introduction to Optimization} % Course/class
+\newcommand{\hmwkNumber}{3} % Homework number
+
+% Constants to set once
+\newcommand{\hmwkAuthorNameI}{Amit Rotner} % Your name
+\newcommand{\hmwkStudentNumberI}{123456789} % Student number
+\newcommand{\hmwkAuthorNameII}{Or Steiner} % Your name
+\newcommand{\hmwkStudentNumberII}{123456789} % Student number
+
+% Packages
+\usepackage{fancyhdr} % Required for custom headers
+\usepackage{lastpage} % Required to determine the last page for the footer
+\usepackage{extramarks} % Required for headers and footers
+
+% Margins
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+
+% General document properties
+\linespread{1.1} % Line spacing
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+
+% Required to not count titlepage in page numbering
+\addtocounter {page} {-1}
+
+% Make a simple command for use in document body
+\newcommand{\start}{
+\maketitle
+\thispagestyle{empty}
+\newpage
+}
+
+% Set up the header and footer
+\pagestyle{fancy}
+\lhead{\hmwkAuthorNameI\ and \hmwkAuthorNameII} % Top left header
+\rhead{\hmwkClass:\ Homework\ \#\hmwkNumber}
+\lfoot{\lastxmark} % Bottom left footer
+\cfoot{} % Bottom center footer
+\rfoot{Page\ \thepage\ of\ \protect\pageref{LastPage}} % Bottom right footer
+\renewcommand\headrulewidth{0.4pt} % Size of the header rule
+\renewcommand\footrulewidth{0.4pt} % Size of the footer rule
+
+% The following 2 commands setup the title page
+\title{
+\vspace{2in}
+\textmd{\textbf{\hmwkClass:\ \\ Homework\ \#\hmwkNumber}}\\
+\normalsize\vspace{0.1in}\small{ \today }\\
+\vspace{3in}
+}
+
+\author{
+  \textbf{\hmwkAuthorNameI} \\
+  \texttt{\hmwkStudentNumberI} \\
+	\textbf{\hmwkAuthorNameII} \\
+  \texttt{\hmwkStudentNumberII}
+}
+
+% Do not display standard date since we use a custom date
+\date{}
+\end_preamble
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip bigskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+start
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{center}
+\end_layout
+
+\end_inset
+
+Gradient Descent, Quasi Newton and BFGS methods
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{center}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Given the Rosenbrock function:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+f\left(\left(x_{1},x_{2},\dots,x_{N}\right)\right)=\sum_{i=1}^{N-1}\left[\left(1-x_{i}\right)^{2}+100\left(x_{i+1}-x_{i}^{2}\right)^{2}\right]
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Using the Gradient Descent method with the starting point 
+\begin_inset Formula $x_{0}=\left(0,0,\dots,0\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $N=10$
+\end_inset
+
+, we get:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename graphs/gd.svg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+TODO: add a short explanation
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Using the Quasi Newton method with the starting point 
+\begin_inset Formula $x_{0}=\left(0,0,\dots,0\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $N=10$
+\end_inset
+
+, we get:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename graphs/quasi.svg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+TODO: add a short explanation
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Using the BFGS method with the starting point 
+\begin_inset Formula $x_{0}=\left(0,0,\dots,0\right)$
+\end_inset
+
+ and 
+\begin_inset Formula $N=10$
+\end_inset
+
+, we get:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Graphics
+	filename graphs/BFGS.svg
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+TODO: add a short explanation
+\end_layout
+
+\end_deeper
+\end_body
+\end_document
